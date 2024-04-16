@@ -205,7 +205,7 @@ nav button svg {
   justify-content: space-between;
   border-top: 0.5px solid #7a7171;
   padding: 0 8vw;
-  padding-bottom: 9vw;
+  padding-bottom: 7vw;
 }
 .div-left {
   position: relative;
@@ -216,7 +216,6 @@ nav button svg {
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
-  /* background-color: r; */
   padding: 2.5vw 0;
 }
 .div-left h4 span {
@@ -225,13 +224,31 @@ nav button svg {
 .div-left h5 {
   font-size: 1.2vw;
   font-weight: 600;
-  text-wrap: wrap;
 }
 
 .div-right {
   position: relative;
-  width: 55%;
+  width: 50%;
   height: 100%;
   top: 0;
-  background-color: green;
+}
+.div-right h2 {
+  font-size: 1.6vw;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.right-elem {
+  border-top: 0.5px solid #7a7171;
+  padding: 3vw 0;
+  height: 160px;
+}
+/* .right-elem:nth-child(4) {
+  border-bottom: none;
+} */
+.div-right .right-elem img {
+  width: 8vw;
+  height: 8vw;
+  object-fit: cover;
+  border-radius: 50%;
+  opacity: 0;
 }
