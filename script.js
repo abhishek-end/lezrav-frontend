@@ -1,5 +1,5 @@
 const nav = document.querySelector("nav");
-function navBarAnimation(params) {
+function navBarAnimation() {
   nav.addEventListener("mouseenter", function () {
     let tl = gsap.timeline();
 
@@ -40,3 +40,33 @@ function navBarAnimation(params) {
   });
 }
 navBarAnimation();
+
+const relem = document.querySelectorAll(".right-elem");
+const relmimg = document.querySelectorAll(".right-elem img");
+
+function imageHover() {
+  relem.forEach((element) => {
+    element.addEventListener("mouseenter", function () {
+      gsap.to(element.childNodes[3], {
+        borderColor: "green",
+        borderWidth: "1px",
+        opacity: 1,
+        scale: 1,
+      });
+    });
+
+    element.addEventListener("mouseleave", function () {
+      gsap.to(element.childNodes[3], {
+        opacity: 0,
+        scale: 0,
+      });
+    });
+    element.addEventListener("mousemove", function (dets) {
+      gsap.to(element.childNodes[3], {
+        x: dets.x - element.getBoundingClientRect().x - 60,
+        y: dets.y - element.getBoundingClientRect().y - 160,
+      });
+    });
+  });
+}
+imageHover();

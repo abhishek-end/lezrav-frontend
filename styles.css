@@ -233,14 +233,23 @@ nav button svg {
   top: -0.1%;
 }
 .div-right h2 {
+  position: relative;
   font-size: 1.6vw;
   text-transform: capitalize;
+  z-index: 11;
   font-weight: 400;
+  /* z-index: ; */
 }
 .right-elem {
   border-top: 0.5px solid #7a7171;
   padding: 3vw 0;
+  /* background-color: #fff; */
+  position: relative;
   height: 160px;
+}
+.right-elem:hover {
+  border-top: 1px solid white;
+  transition: ease 0.2s;
 }
 /* .right-elem:nth-child(4) {
   border-bottom: none;
@@ -251,4 +260,7 @@ nav button svg {
   object-fit: cover;
   border-radius: 50%;
   opacity: 0;
+  scale: 0;
+  z-index: 0;
+  position: absolute;
 }
