@@ -75,7 +75,7 @@ function showWatchReel() {
   pageContent.addEventListener("click", function () {
     video.play();
     gsap.to(video, {
-      transform: "scaleX(1.1) scaleY(1.2)",
+      transform: "scaleX(1) scaleY(1)",
       opacity: 1,
       borderRadius: 0,
     });
