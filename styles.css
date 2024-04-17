@@ -1,4 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"); */
+@font-face {
+  font-family: "Leiko";
+  src: url("https://assets.website-files.com/64a2ab71942e1d57feb6fe39/64dd054cabb425ac6a0d4607_Leiko-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 * {
   margin: 0;
@@ -23,6 +31,8 @@ nav {
   width: 100%;
   padding: 2vw 8vw;
   height: 12vh;
+  z-index: 11;
+  font-family: "Leiko";
 }
 nav h1 {
   text-transform: uppercase;
@@ -166,7 +176,6 @@ nav button svg {
   top: 0;
   left: 0;
   background: linear-gradient(to right, #111, transparent);
-
   z-index: 2;
 }
 #moving-div .blur-right {
@@ -200,7 +209,7 @@ nav button svg {
   width: 100%;
   display: flex;
   background: #111;
-  position: absolute;
+  position: relative;
   align-items: center;
   justify-content: space-between;
   border-top: 0.5px solid #7a7171;
@@ -238,7 +247,6 @@ nav button svg {
   text-transform: capitalize;
   z-index: 11;
   font-weight: 400;
-  /* z-index: ; */
 }
 .right-elem {
   border-top: 0.5px solid #7a7171;
@@ -251,16 +259,61 @@ nav button svg {
   border-top: 1px solid white;
   transition: ease 0.2s;
 }
-/* .right-elem:nth-child(4) {
-  border-bottom: none;
-} */
 .div-right .right-elem img {
   width: 8vw;
   height: 8vw;
   object-fit: cover;
   border-radius: 50%;
   opacity: 0;
-  scale: 0;
-  z-index: 0;
   position: absolute;
+}
+#page3 {
+  height: 80vh;
+  width: 100%;
+  position: relative;
+  background: url("https://lazarev.kiev.ua/la24/reel-cover.webp") center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.page3-content {
+  display: flex;
+  padding: 1vw;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: red; */
+}
+.page3-content .play {
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3.3vw;
+  background-color: #fff;
+  margin-bottom: 1vw;
+  font-size: 2vw;
+}
+.page3-content .play i {
+  color: #111;
+}
+.page3-content h5 {
+  font-size: 1vw;
+  border-radius: 50px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  color: #111;
+  padding: 10px;
+  background-color: #fff;
+  opacity: 0;
+}
+#page3 video {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  transform: scaleX(0.7) scaleY(0);
+  z-index: 99999;
+  opacity: 0;
 }

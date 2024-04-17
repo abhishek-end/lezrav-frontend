@@ -39,7 +39,6 @@ function navBarAnimation() {
     });
   });
 }
-navBarAnimation();
 
 const relem = document.querySelectorAll(".right-elem");
 const relmimg = document.querySelectorAll(".right-elem img");
@@ -48,8 +47,6 @@ function imageHover() {
   relem.forEach((element) => {
     element.addEventListener("mouseenter", function () {
       gsap.to(element.childNodes[3], {
-        borderColor: "green",
-        borderWidth: "1px",
         opacity: 1,
         scale: 1,
       });
@@ -69,4 +66,46 @@ function imageHover() {
     });
   });
 }
+
+function showWatchReel() {
+  const play = document.querySelector(".play");
+  const pageContent = document.querySelector(".page3-content");
+  const video = document.querySelector("#page3 video");
+
+  pageContent.addEventListener("click", function () {
+    video.play();
+    gsap.to(video, {
+      transform: "scaleX(1.1) scaleY(1.2)",
+      opacity: 1,
+      borderRadius: 0,
+    });
+  });
+
+  video.addEventListener("click", () => {
+    video.pause();
+    gsap.to(video, {
+      x: 20,
+      transform: "scaleX(0.7) scaleY(0)",
+      opacity: 0,
+      borderRadius: "30px",
+    });
+  });
+
+  play.addEventListener("mouseenter", function () {
+    gsap.to(".page3-content h5", {
+      y: -5,
+      opacity: 1,
+      duration: 0.2,
+    });
+  });
+  play.addEventListener("mouseleave", function () {
+    gsap.to(".page3-content h5", {
+      opacity: 0,
+      y: 0,
+      duration: 0.2,
+    });
+  });
+}
+navBarAnimation();
 imageHover();
+showWatchReel();
