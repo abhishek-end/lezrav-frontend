@@ -567,7 +567,6 @@ nav button svg {
   padding-top: 6vw;
   padding-bottom: 3.8vw;
   opacity: 1;
-  /* transition: ease 0.5s; */
 }
 .card-left:hover video,
 .card-right:hover video {
@@ -591,4 +590,24 @@ nav button svg {
   position: absolute;
   left: 0;
   transition: height 0.5s ease, transform 0.5s ease;
+}
+#page8 {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #111;
+}
+#page8 .dg_prdct_ds {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #fff;
+}
+.dg_prdct_ds h2 {
+  font-size: 3.5vw;
+  color: #fff;
+  font-weight: 600;
+  text-transform: capitalize;
 }
