@@ -82,7 +82,7 @@ function showWatchReel() {
   });
 
   video.addEventListener("click", () => {
-    video.pause();
+    video.load();
     gsap.to(video, {
       x: 20,
       transform: "scaleX(0.7) scaleY(0)",
@@ -106,6 +106,46 @@ function showWatchReel() {
     });
   });
 }
+
+function playVideo7() {
+  const sections = document.querySelectorAll(".sec-right");
+  sections.forEach((elem) => {
+    elem.addEventListener("mouseenter", () => {
+      elem.childNodes[3].style.opacity = "1";
+      elem.childNodes[3].play();
+    });
+    elem.addEventListener("mouseleave", () => {
+      elem.childNodes[3].style.opacity = "0";
+      elem.childNodes[3].load();
+    });
+  });
+}
+
+function matasqq() {
+  const cards = document.querySelectorAll(".card-left , .card-right");
+  cards.forEach((elem) => {
+    elem.addEventListener("mouseenter", function () {
+      elem.childNodes[7].style.opacity = "1";
+      elem.childNodes[7].play();
+    });
+    elem.addEventListener("mouseleave", function () {
+      elem.childNodes[7].style.opacity = "0";
+      elem.childNodes[7].load();
+    });
+  });
+  cards.forEach((elem) => {
+    elem.addEventListener("mouseenter", function () {
+      elem.childNodes[7].style.opacity = "1";
+      elem.childNodes[7].play();
+    });
+    elem.addEventListener("mouseleave", function () {
+      elem.childNodes[7].style.opacity = "0";
+      elem.childNodes[7].load();
+    });
+  });
+}
 navBarAnimation();
 imageHover();
 showWatchReel();
+playVideo7();
+matasqq();
